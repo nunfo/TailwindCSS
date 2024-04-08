@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link href="./styles.css" rel="stylesheet">
+  <title>Curso de Tailwind - Inicio</title>
+</head>
+
+<body>
+  <h1 class="bg-primary text-[#888883] text-6xl font-bold text-center p-10">Curso de Tailwind</h1>
+  <h2 class="text-5xl font-black mt-10">
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary-100">Texto con
+      gradiente</span>
+  </h2>
+  <button
+    class="bg-secondary-100 hover:bg-secondary-200 text-gray-300 p-4 rounded-md w-32 mx-auto my-8 block border-gray-500 border-2">Suscríbete</button>
+
+  <div class="bg-gradient-to-r from-secondary-100 to-secondary-200 text-gray-50 h-24 flex items-center justify-center">
+    Gradiente</div>
+
+  <h2 class="text-5xl font-black mt-10 mb-4">Medidas</h2>
+  <div class="bg-red-100 h-4">Alto fijo 4rem / 64px</div>
+  <div class="bg-red-200 w-full">Ancho 100%</div>
+  <div class="bg-red-300 w-screen">Ancho 100% width viewport</div>
+  <div class="bg-red-400 w-svw">Ancho 100% small width viewport</div>
+
+  <div class="bg-red-500 w-min">Ancho min-content</div>
+  <div class="bg-red-600 h-max">Alto<br>max-content</div>
+  <div class="bg-red-700 w-fit">Ancho fit-content</div>
+
+  <div class="bg-red-800 w-100">Ancho personalizado con spacing 25rem / 400px</div>
+  <div class="bg-red-900 w-128">Ancho personalizado con width 32rem / 512px</div>
+  <div class="bg-red-950 p-15 h-62 w-62">Padding (10.5rem), alto y ancho (15.5rem) </div>
+
+
+  <h2 class="text-5xl font-black mt-10 mb-4">Estados</h2>
+  <div class="bg-blue-400 p-6">
+    <form action="" class="bg-white w-80 mx-auto mt-8 rounded-lg p-6">
+
+      <input class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md disabled:bg-gray-300" type="text"
+        placeholder="Nombre" disabled>
+
+      <input class="border border-gray-300 w-full px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500
+        invalid:focus:ring-red-400 peer placeholder:text-green-600 placeholder:italic" type="email"
+        placeholder="Email">
+      <p class="text-red-400 hidden peer-invalid:block">El email es incorrecto</p>
+
+      <input
+        class="border border-gray-300 w-full px-3 py-2 my-4 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+        type="password" placeholder="Contraseña">
+
+      <ol class="list-decimal ml-6 marker:text-orange-500 marker:font-bold">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ol>
+
+      <p class="mt-6 selection:bg-green-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis nam sit
+        consectetur eos quod? Quia, doloremque.
+        Quisquam autem labore similique dolore, qui porro consequatur ad esse in vel magnam perferendis!
+      </p>
+
+      <p
+        class="mt-6 text-justify first-line:uppercase first-letter:text-7xl first-letter:-mt-3 first-letter:mr-3 first-letter:font-medium first-letter:float-left">
+        Occusantium tenetur quo, assumenda vitae expedita hic delectus sunt error
+        nobis modi non ipsa atque nostrum commodi unde qui
+        dolores. Amet, porro! Ad, placeat voluptatum tempora pariatur provident molestias voluptates sit suscipit ex,
+        nostrum, non atque adipisci. Aliquam cum aut corrupti quos dolorem tenetur.
+      </p>
+
+      <div class="flex justify-between mt-6">
+        <button class="bg-orange-600 w-12/25 p-3 text-white rounded-md relative 
+          after:content-[''] after:absolute after:left-full after:border-8 after:border-transparent after:border-l-orange-600 after:top-4
+        hover:bg-orange-800 hover:after:border-l-orange-800">
+          Cancelar
+        </button>
+
+        <input class="bg-blue-600 w-12/25 p-3 text-white rounded-md cursor-pointer hover:bg-blue-800" type="submit"
+          value="Enviar">
+      </div>
+
+      <br>
+
+      <input type="file"
+        class="w-full h-12 file:h-12 file:bg-orange-200 file:border-0 file:rounded-md file:text-orange-600 file:font-semibold file:px-3 hover:file:bg-orange-800">
+
+    </form>
+  </div>
+
+</body>
+
+</html>

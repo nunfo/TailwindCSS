@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link href="./styles.css" rel="stylesheet">
+  <title>Curso de Tailwind - FlexBox</title>
+</head>
+
+<body>
+
+  <div class="mt-8 p-4">
+    <h2 class="my-4 text-3xl">Flex Row espaciado a los extremos y centrado vertical diferente para cada elemento</h2>
+    <div class="flex place-content-between border-2 border-red-800 h-[250px]">
+      <div class="card self-start">1</div>
+      <div class="card self-center">2</div>
+      <div class="card self-end">3</div>
+    </div>
+  </div>
+
+  <div class="mt-8 p-4">
+    <h2 class="my-4 text-3xl">Flex Row con orden invertido, mismo espacio alrededor de todos los elementos y alineado
+      verticalmente al final</h2>
+    <div class="flex flex-row-reverse place-content-around items-end border-2 border-red-800 h-[250px]">
+      <div class="card">1</div>
+      <div class="card">2</div>
+      <div class="card">3</div>
+    </div>
+  </div>
+
+  <div class="mt-8 p-4">
+    <h2 class="my-4 text-3xl">Flex Row con mismo espacio entre elementos y hasta los bordes, centrado verticalmente</h2>
+    <div class="flex place-content-evenly items-center border-2 border-red-800 h-[250px]">
+      <div class="card">1</div>
+      <div class="card">2</div>
+      <div class="card">3</div>
+    </div>
+  </div>
+
+  <div class="mt-8 p-4">
+    <h2 class="my-4 text-3xl">Flex Row conservando el ancho de los elementos y recolocandose en base al ancho disponible
+      del contenedor. Si tienen espacio creceran a lo ancho (grow), y si se reduce el espacio no se reducirá su anchura (shrink-0) si no
+      que se harán más pequeños manteniendo su aspecto</h2>
+    <div class="flex flex-wrap gap-4 border-2 border-red-800">
+      <div class="card grow shrink-0">1</div>
+      <div class="card grow shrink-0">2</div>
+      <div class="card grow shrink-0">3</div>
+      <div class="card grow shrink-0">4</div>
+      <div class="card grow shrink-0">5</div>
+      <div class="card grow shrink-0">6</div>
+    </div>
+  </div>
+
+
+  <div class="mt-8 p-4">
+    <h2 class="my-4 text-3xl">Flex Row con diferentes anchuras</h2>
+    <div class="flex gap-4 border-2 border-red-800">
+      <div class="card basis-1/4 sm:basis-1/3">1</div>
+      <div class="card basis-1/4 sm:basis-1/3">2</div>
+      <div class="card basis-1/2 sm:basis-1/3">3</div>
+    </div>
+  </div>  
+
+  <div class="mt-8 p-4">
+    <h2 class="my-4 text-3xl">Flex en formato columna</h2>
+    <div class="mt-8 flex flex-col border-2 border-red-800">
+      <div class="card">1</div>
+      <div class="card">2</div>
+      <div class="card">3</div>
+    </div>
+  </div>
+
+  <div class="mt-8 p-4">
+    <h2 class="my-4 text-3xl">Flex en formato columna con diferentes alineaciones horizontales</h2>
+    <div class="mt-8 flex flex-col border-2 border-red-800">
+      <div class="card self-start">1</div>
+      <div class="card self-center">2</div>
+      <div class="card self-end">3</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

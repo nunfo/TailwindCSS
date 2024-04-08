@@ -1,0 +1,24 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  p:not(.mt-4)::first-letter {
+    /* Podemos añadir reglas CSS que se aplicarán a todos los estilos de la aplicación. */
+    margin-block-start: -12px;
+    color: rgb(234 88 12);
+  }
+}
+
+@layer components {
+  .card {
+    /* Podemos añadir estilos de tailwind que se aplicarán a todos los componentes de la aplicación. */
+    @apply bg-red-500 w-40 h-40 grid place-content-center rounded-lg 
+    text-white font-bold border-2 border-red-600 text-4xl;
+  }
+  .card-grid {
+    /* Podemos añadir estilos de tailwind que se aplicarán a todos los componentes de la aplicación. */
+    @apply bg-red-500 min-h-40 grid place-content-center rounded-lg 
+    text-white font-bold border-2 border-red-600 text-4xl;
+  }  
+}

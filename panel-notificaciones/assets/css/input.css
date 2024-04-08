@@ -1,0 +1,183 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url(../fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--light-grayish-blue-1);
+}
+
+.main {
+  padding: 1.5rem .875rem;
+  background-color: var(--white);
+}
+
+.notifications {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  align-items: center;
+
+  & .title {
+    color: var(--very-dark-blue);
+    font-size: 1.25rem;
+    font-weight: 800;
+    word-spacing: .5rem;
+  }
+
+  & .number {
+    color: var(--white);
+    background-color: var(--blue);
+    padding: .25rem .75rem;
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+  }
+
+  & .mark {
+    color: var(--dark-grayish-blue);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}
+
+.post {
+  display: flex;
+  column-gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: .875rem;
+  min-width: 340px;
+  cursor: pointer;
+  background-color: var(--very-light-grayish-blue);
+  color: var(--dark-grayish-blue);
+  margin: 0 auto .75rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+
+  &:not(:has(.not-read)) {
+    background-color: var(--white);
+  }
+
+  & .image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  & .name {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+
+  & .reaction {
+    font-weight: 700;
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+
+  & .group {
+    color: var(--blue);
+    font-weight: 700;
+  }
+
+  & .time {
+    color: var(--grayish-blue);
+    font-weight: 500;
+  }
+
+  & .message-container {
+    margin: .5rem 0;
+    padding: 1rem;
+    border: 1px solid var(--light-grayish-blue-2);
+    border-radius: .25rem;
+
+    &:hover {
+      background-color: var(--light-grayish-blue-1);
+    }
+  }
+
+  & .picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: auto;
+  }
+}
+
+.not-read {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  margin-left: .25rem;
+  border-radius: 50%;
+  background-color: var(--red);
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  -ms-border-radius: 50;
+  -o-border-radius: 50;
+}
+
+.attribution {
+  font-size: .875rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 730px;
+    padding: 2rem 1.5rem;
+    margin: 4rem auto 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+  .post {
+    font-size: 1rem;
+  }
+  .attribution {
+    margin-top: 0;
+  }
+ 
+}

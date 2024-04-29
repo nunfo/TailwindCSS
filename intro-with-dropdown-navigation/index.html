@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -14,19 +14,20 @@
 
 <body>
   <header>
-    <div id="hamburguer-menu-container">
-      <img src="./images/logo.svg" alt="logo">
-      <div id="hamburger-menu">
+    <img class="logo" src="./images/logo.svg" alt="logo">
+    <nav>
+      <div class="hamburger-menu">
         <div></div>
       </div>
-    </div>
-    <nav>
-      <div id="back"></div>
-      <div id="front">
-        <ul id="options-menu">
+      <div class="back"></div>
+      <div class="front">
+        <ul class="options-menu">
           <li>
-            <button>Features<img src="./images/icon-arrow-down.svg" alt="arrow down"></button>
-            <ul id="features-ul">
+            <button class="features-btn">
+              Features
+              <img id="features-img" src="./images/icon-arrow-down.svg" alt="arrow down">
+            </button>
+            <ul class="features-ul">
               <li>
                 <a href="#">
                   <img src="./images/icon-todo.svg" alt="todo icon">
@@ -54,8 +55,11 @@
             </ul>
           </li>
           <li>
-            <button>Company<img src="./images/icon-arrow-down.svg" alt="arrow down"></button>
-            <ul id="company-ul">
+            <button class="company-btn">
+              Company
+              <img id="company-img" src="./images/icon-arrow-down.svg" alt="arrow down">
+            </button>
+            <ul class="company-ul">
               <li>
                 <a href="#">History</a>
               </li>
@@ -74,9 +78,9 @@
             <a href="#">About</a>
           </li>
         </ul>
-        <div id="btns-container">
+        <div class="btns-container">
           <button>Login</button>
-          <button id="register">Register</button>
+          <button class="btn-register">Register</button>
         </div>
       </div>
       </div>
@@ -85,13 +89,13 @@
 
   <main>
     <section>
-      <h1>Make remote work</h1>
+      <h1>Make <span>remote work</span></h1>
       <p>
         Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
       </p>
       <button>Learn more</button>
-      <div id="logos-container">
+      <div class="logos-container">
         <img src="./images/client-databiz.svg" alt="databiz icon">
         <img src="./images/client-audiophile.svg" alt="audiophile icon">
         <img src="./images/client-meet.svg" alt="meet icon">
@@ -100,9 +104,9 @@
     </section>
     <section>
       <picture>
-        <source srcset="./images/image-hero-mobile.png" media="(max-width: 639px)">
-        <source srcset="./images/image-hero-desktop.png" media="(min-width: 640px)">
-        <img id="hero-image" src="./images/image-hero-mobile.png" alt="hero image">
+        <source srcset="./images/image-hero-mobile.png" media="(max-width: 767px)">
+        <source srcset="./images/image-hero-desktop.png" media="(min-width: 768px)">
+        <img class="hero-image" src="./images/image-hero-mobile.png" alt="hero image">
       </picture>
     </section>
   </main>

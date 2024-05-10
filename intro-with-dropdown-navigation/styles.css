@@ -25,6 +25,7 @@ body {
   color: var(--almost-black);
   font-size: 1.6rem;
   min-width: 350px;
+  overflow-x: hidden; /* Evitamos el scroll horizontal durante la transición del menu lateral */
 }
 
 button {
@@ -118,19 +119,16 @@ header {
       height: 100%;
       top: 0;
       opacity: 0;
-      right: -60%;
+      right: 0;
       z-index: 1;
-      transition: opacity .5s ease, right .75s ease;
-      -webkit-transition: right .75s ease;
-      -moz-transition: right .75s ease;
-      -ms-transition: right .75s ease;
-      -o-transition: right .75s ease;
-      
+      transform: translateX(100%);
+      /* transition: opacity 1.25s ease, transform 1.25s ease, padding 0s 1.25s, width 1.25s ease;  */
       &.active {
-        width: 60%;
-        right: 0;
+        width: 60%; 
+        transform: translateX(0);
         opacity: 1;
         padding: 7rem 1.5rem 2.5rem;
+        /* transition: opacity .75s ease, transform .75s ease, padding 0s, width .75s ease;  */
       }
       
       & ul {
@@ -201,12 +199,12 @@ main {
 
   & h1 {
     margin-bottom: 2rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   & p {
     color: var(--medium-gray);
-    margin: 0 2rem 2rem;
+    margin: 0 1.75rem 2rem;
     line-height: 2.5rem;
     font-size: 1.6rem;
     font-weight: 600;
@@ -253,13 +251,14 @@ main {
   }
 }
 
+/* @media (min-width: 768px) { */
 @media (min-width: 768px) {
   header {
     & nav {
       & .front {
-        right: -25%;
+        right: 0;
         &.active {
-          width: 25%;
+          width: 30%;
         }
       }
     }
@@ -293,6 +292,17 @@ main {
   }
 }
 
+@media (max-width: 1279px) {
+  /* La transición se aplica únicamente para pantallas hasta 1279px de ancho */
+  .front {
+    /* Al volver al estado inicial se aplica una transición más lenta */
+    transition: opacity 1.25s ease, transform 1.25s ease, padding 0s 1.25s, width 1.25s ease; 
+    &.active {
+      transition: opacity .75s ease, transform .75s ease, padding 0s, width .75s ease; 
+    }
+  }
+}
+
 @media (min-width: 1280px) {
   header {
 
@@ -321,6 +331,7 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transform: none;
         & .options-menu {
           width: 390px;
           display: flex;
@@ -373,12 +384,19 @@ main {
       font-size: 6rem;
     }
     & p {
-      margin: 3rem 20% 3rem 0;
+      font-size: 1.8rem;
+      margin: 5rem 15% 0 0;
+    }
+    & button {
+      margin: 6rem 0px 8rem;
     }
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1536px) {
+  body {
+    max-width: 90%;
+  }
   main {
     & h1 {
       font-size: 6rem;
@@ -386,5 +404,17 @@ main {
     & p {
       margin: 3rem 25% 3rem 0;
     }
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    max-width: 60%;
   }
 }
